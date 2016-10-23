@@ -20,7 +20,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'client/index.html',
       inject: 'body',
-      hash: true
+      hash: false
     }),
 
     // Automatically move all modules defined outside of application directory to vendor bundle.
