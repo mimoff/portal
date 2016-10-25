@@ -1,16 +1,18 @@
 <!-- Place all UI elements intended to be present across all routes in this file -->
 <div class="app">
-  ver.0.03
+  ver.0.04
   <uib-tabset active="activeForm">
-    <uib-tab index="0" heading="Form Tab">
+    <uib-tab index="0" heading="USER">
+      Zero Tab Content
+    </uib-tab>
+    <uib-tab index="1" heading="MAIL">
       Some Tab Content
     </uib-tab>
-    <uib-tab index="1" heading="Tab One">
-      Some Tab Content
-    </uib-tab>
-    <uib-tab index="2" heading="Tab Two">
+    <uib-tab index="2" heading="NEWS">
       More Tab Content
     </uib-tab>
   </uib-tabset>
+  <mail-list></mail-list>
+  <user-list></user-list>
   <div ui-view></div>
 </div>

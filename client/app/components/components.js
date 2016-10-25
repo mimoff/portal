@@ -1,12 +1,16 @@
 import angular from 'angular';
-import Home from './home/home';
-import About from './about/about';
+import UserCard from './userCard/userCard';
+import UserList from './userList/userList';
+import MailCard from './mailCard/mailCard';
+import MailList from './mailList/mailList';
 
 let componentModule = angular.module('app.components', [
-  Home,
-  About
+  UserCard,
+  UserList,
+  MailCard,
+  MailList
 ])
-  
+
 .name;
 
 export default componentModule;
