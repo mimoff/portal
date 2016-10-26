@@ -2,17 +2,9 @@
 <div class="app">
   ver.0.04
   <uib-tabset active="activeForm">
-    <uib-tab index="0" heading="USER">
-      Zero Tab Content
-    </uib-tab>
-    <uib-tab index="1" heading="MAIL">
-      Some Tab Content
-    </uib-tab>
-    <uib-tab index="2" heading="NEWS">
-      More Tab Content
-    </uib-tab>
+    <uib-tab index="0" heading="USER" ui-sref="user"></uib-tab>
+    <uib-tab index="1" heading="MAIL" ui-sref="mail"></uib-tab>
+    <uib-tab index="2" heading="NEWS" ui-sref="news"></uib-tab>
   </uib-tabset>
-  <mail-list></mail-list>
-  <user-list></user-list>
   <div ui-view></div>
 </div>
