@@ -4,7 +4,10 @@ import './mailList.styl';
 
 let mailListComponent = {
   restrict: 'E',
-  bindings: {},
+  bindings: {
+    mailbox: '<',
+    onSelect: '&'
+  },
   template,
   controller
 };

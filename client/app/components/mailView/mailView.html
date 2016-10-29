@@ -1,4 +1,13 @@
-<div>
-  <h1>{{ $ctrl.name }}</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <mailbox-list on-select="$ctrl.onSelectBox(box)"></mailbox-list>
+    </div>
+    <div class="col-md-4">
+      <mail-list data-mailbox="$ctrl.box" on-select="$ctrl.onSelectMail(mail)"></mail-list>
+    </div>
+    <div class="col-md-6">
+      <mail-card ng-if="$ctrl.email" data-email="$ctrl.email" data-showtext="true"></mail-card>
+    </div>
+  </div>
 </div>
-<mail-list></mail-list>

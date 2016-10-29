@@ -1,13 +1,20 @@
 class MailListController {
   constructor(MailService) {
     this.name = 'mailList';
-    this.mailService = MailService;
+    this._MailService = MailService;
   }
   $onInit() {
-    this.emaildetail = null;
     this.emails = [];
-    this.mailService.getMails().then(response => this.emails = response);
-  }}
+    //this._MailService.getMails(this.mailbox).then(response => this.emails = response);
+  }
+
+  $onChanges(changes) {
+    if (changes.mailbox && changes.mailbox.currentValue) {
+      this.emails = [];
+      this._MailService.getMails(this.mailbox).then(response => {this.emails = response; this.onSelect({mail: this.emails[0]})});
+    }
+  }
+}
 
 MailListController.$inject = ['MailService'];
 

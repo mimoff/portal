@@ -5,6 +5,7 @@ import UserList from './userList/userList';
 import MailView from './mailView/mailView';
 import MailCard from './mailCard/mailCard';
 import MailList from './mailList/mailList';
+import MailBoxList from './mailboxList/mailboxList';
 
 let componentModule = angular.module('app.components', [
   UserView,
@@ -12,7 +13,8 @@ let componentModule = angular.module('app.components', [
   UserList,
   MailView,
   MailCard,
-  MailList
+  MailList,
+  MailBoxList
 ])
 
 .name;

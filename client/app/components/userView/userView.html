@@ -1,4 +1,12 @@
-<div>
-  <h1>{{ $ctrl.name }}</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-4">
+      <user-list on-select="$ctrl.onSelect(user)"></user-list>
+    </div>
+    <!--div class="col-md-6">
+      <mail-card data-email="$ctrl.email" data-showtext="true"></mail-card>
+    </div-->
+  </div>
 </div>
-<user-list></user-list>
