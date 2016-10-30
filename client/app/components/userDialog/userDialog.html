@@ -1,0 +1,25 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title">Редактирование профиля пользователя</h3>
+</div>
+<div class="modal-body" id="modal-body">
+  <div class="form-group">
+    <label for="inputFullname">Имя</label>
+    <input type="text" class="form-control" id="inputFullname" placeholder="Name" ng-model="$ctrl.user.fullName">
+  </div>
+  <div class="form-group">
+    <label for="inputBirthdate">Дата рождения</label>
+    <input type="text" class="form-control" id="inputBirthdate" placeholder="Date" ng-model="$ctrl.user.birthdate">
+  </div>
+  <div class="form-group">
+    <label for="inputEmail">Email</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="Enter email" ng-model="$ctrl.user.email">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Адрес</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Address" ng-model="$ctrl.user.address">
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-success" type="button" ng-click="$ctrl.ok()">OK</button>
+  <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+</div>

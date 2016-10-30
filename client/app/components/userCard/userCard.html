@@ -4,16 +4,15 @@
   </div>
   <div class="panel-body">
     <div class="row">
-      <div class="">
         <table class="table table-user-information">
           <tbody>
           <tr><td>Дата рождения</td><td>{{$ctrl.user.birthdate | date:'yyyy-MM-dd'}}</td></tr>
           <tr><td>Пол</td><td>{{$ctrl.user.gender}}</td></tr>
           <tr><td>Адрес</td><td>{{$ctrl.user.address}}</td></tr>
           <tr><td>Email</td><td><a href="mailto:{{user.email}}">{{$ctrl.user.email}}</a></td>
+          <tr><td><button type="button" class="btn btn-success" ng-click="$ctrl.onEdit()">Edit</button></td><td><button type="button" class="btn btn-warning" ng-click="$ctrl.onDelete()">Delete</button></td>
           </tbody>
         </table>
-      </div>
     </div>
   </div>
 </div>
