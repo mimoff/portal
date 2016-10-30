@@ -1,7 +1,8 @@
 class UserCardController {
-  constructor($uibModal) {
+  constructor($uibModal,UserService) {
     this.name = 'userCard';
     this._$uibModal = $uibModal;
+    this._UserService = UserService;
   }
 
   onEdit() {
@@ -12,14 +13,17 @@ class UserCardController {
       }
     });
 
-    modalInstance.result.then(value => this.user=value);
+    modalInstance.result.then(value => {
+      //this.user=value;
+      this._UserService.updateUser(value).then(response => this.user = response);
+    });
   }
 
-  onDelete() {
+  __onDelete() {
     alert('Delete ' + this.user);
   }
 }
 
-UserCardController.$inject = ['$uibModal'];
+UserCardController.$inject = ['$uibModal','UserService'];
 
 export default UserCardController;

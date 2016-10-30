@@ -5,7 +5,8 @@ import './userCard.styl';
 let userCardComponent = {
   restrict: 'E',
   bindings: {
-    user: '<'
+    user: '<',
+    onDelete: '&'
   },
   template,
   controller

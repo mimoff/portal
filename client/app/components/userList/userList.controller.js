@@ -4,16 +4,26 @@ class UserListController {
   //  this.users = [];
   //  $http.get('http://test-api.javascript.ru/v1/vbuyanov/users').then(response => this.users = response.data);
   //}
-  constructor(UserService) {
+  constructor($scope,UserService) {
     this.name = 'userList';
+    this._$scope = $scope;
     this.userService = UserService;
   }
+
   $onInit() {
     this.users = [];
+    this._$scope.$on('userCreated', (eventname,user) => {debugger; this.users.push(user)});
     this.userService.getUsers().then(response => this.users = response);
-  }}
+  }
 
-UserListController.$inject = ['UserService'];
+  onDeleteUser(user) {
+    debugger;
+    this.userService.deleteUser(user).then(response => this.$onInit());
+  }
+
+}
+
+UserListController.$inject = ['$scope','UserService'];
 //UserListController.$inject = ['$http'];
 
 export default UserListController;
