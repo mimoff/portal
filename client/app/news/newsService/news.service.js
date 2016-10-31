@@ -5,14 +5,15 @@ class NewsService {
   }
 
   getNews(feedurl) {
-    debugger;
+    /*debugger;
     var feedparser = require('node-feedparser');
 
     return this._$http.get(feedurl).then(response => feedparser(response.data, function(error, ret) {
       debugger;
       //return _$q.resolve(ret);
       console.log(error,ret);
-    } ));
+    } )
+  );*/
 }
 }
 
