@@ -14,7 +14,12 @@ let mailViewModule = angular.module('mailView', [
   $stateProvider
     .state('mail', {
       url: '/mail',
-      component: 'mailView'
+      component: 'mailView',
+      resolve: {
+        access: ['LoginService', function(LoginService) {
+          return LoginService.checkAuth().then( true );
+        }]
+      }
     });
 })
 

@@ -4,10 +4,10 @@ class MailService {
   }
   getBoxes() {
     //return this.$http.get('http://test-api.javascript.ru/v1/vbuyanov/users').then(response => this.users = response.data);
-    return this.$http.get('http://test-api.javascript.ru/v1/vbuyanov/mailboxes').then(response => response.data);
+    return this.$http.get('https://test-api.javascript.ru/v1/vbuyanov/mailboxes').then(response => response.data);
   }
   getMails(boxId) {
-    return this.$http.get('http://test-api.javascript.ru/v1/vbuyanov/letters').then(response => response.data.filter(d => d.mailbox == boxId ) );
+    return this.$http.get('https://test-api.javascript.ru/v1/vbuyanov/letters').then(response => response.data.filter(d => d.mailbox == boxId ) );
   }
 /*  getMails(boxId) {
     //return this.$http.get('http://test-api.javascript.ru/v1/vbuyanov/users').then(response => this.users = response.data);

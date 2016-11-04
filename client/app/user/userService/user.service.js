@@ -4,20 +4,20 @@ class UserService {
   }
 
   getUsers() {
-    return this.$http.get('http://test-api.javascript.ru/v1/vbuyanov/users').then(response => response.data);
+    return this.$http.get('https://test-api.javascript.ru/v1/vbuyanov/users').then(response => response.data);
   }
 
   createUser(user) {
-    return this.$http.post('http://test-api.javascript.ru/v1/vbuyanov/users',user).then(response => {debugger; return response.data;});
+    return this.$http.post('https://test-api.javascript.ru/v1/vbuyanov/users',user).then(response => {debugger; return response.data;});
   }
 
   updateUser(user) {
-    return this.$http.patch('http://test-api.javascript.ru/v1/vbuyanov/users/'+user._id,user).then(response => response.data);
+    return this.$http.patch('https://test-api.javascript.ru/v1/vbuyanov/users/'+user._id,user).then(response => response.data);
   }
 
   deleteUser(user) {
     debugger;
-    return this.$http.delete('http://test-api.javascript.ru/v1/vbuyanov/users/'+user._id).then(response => {debugger; return response.data;});
+    return this.$http.delete('https://test-api.javascript.ru/v1/vbuyanov/users/'+user._id).then(response => {debugger; return response.data;});
   }
 }
 

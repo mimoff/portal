@@ -11,7 +11,12 @@ let userViewModule = angular.module('userView', [
   $stateProvider
     .state('user', {
       url: '/user',
-      component: 'userView'
+      component: 'userView',
+      resolve: {
+        access: ['LoginService', function(LoginService) {
+          return LoginService.checkAuth().then( true );
+        }]
+      }
     });
 })
 

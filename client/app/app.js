@@ -3,7 +3,7 @@ import uiRouter from 'angular-ui-router';
 import uiBootstrap from 'angular-ui-bootstrap';
 import MailComponents from './mail/mailComponents';
 import UserComponents from './user/userComponents';
-import NewsComponents from './news/newsComponents';
+import LoginComponents from './login/loginComponents';
 import AppComponent from './app.component';
 import 'normalize.css';
 
@@ -12,7 +12,7 @@ angular.module('app', [
     uiBootstrap,
     UserComponents,
     MailComponents,
-    NewsComponents
+    LoginComponents
   ])
   .config(($locationProvider) => {
     "ngInject";
