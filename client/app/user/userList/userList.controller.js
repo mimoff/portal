@@ -12,18 +12,15 @@ class UserListController {
 
   $onInit() {
     this.users = [];
-    this._$scope.$on('userCreated', (eventname,user) => {debugger; this.users.push(user)});
+    this._$scope.$on('userCreated', (eventname,user) => this.users.push(user));
     this.userService.getUsers().then(response => this.users = response);
   }
 
   onDeleteUser(user) {
-    debugger;
     this.userService.deleteUser(user).then(response => this.$onInit());
   }
-
 }
 
 UserListController.$inject = ['$scope','UserService'];
-//UserListController.$inject = ['$http'];
 
 export default UserListController;

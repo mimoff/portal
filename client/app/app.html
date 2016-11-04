@@ -3,50 +3,25 @@
 <nav class="navbar navbar-static-top">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
+      </button-->
       <a class="navbar-brand" ui-sref="home">PORTAL</a>
     </div>
-    <!--div class="navbar-header">
-      <uib-tabset class="navbar-collapse collapse">
-      <uib-tab index="0" heading="USER" ui-sref="user"></uib-tab>
-      <uib-tab index="1" heading="MAIL" ui-sref="mail"></uib-tab>
-      <uib-tab index="2" heading="NEWS" ui-sref="news"></uib-tab>
-      </uib-tabset>
-    </div-->
 
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a ui-sref="user">USER</a></li>
         <li><a ui-sref="mail">MAIL</a></li>
-        <!--li><a ui-sref="news">NEWS</a></li-->
       </ul>
-    <!--/div>
-
-    <div class="navbar-collapse collapse"-->
-      <!--form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" placeholder="Email" class="form-control">
-        </div>
-        <div class="form-group">
-          <input type="password" placeholder="Password" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-success">Sign in</button>
-      </form-->
       <login-panel></login-panel>
     </div><!--/.navbar-collapse -->
   </div>
 </nav>
 
 <div class="app">
-  <!--uib-tabset active="activeForm">
-    <uib-tab index="0" heading="USER" ui-sref="user"></uib-tab>
-    <uib-tab index="1" heading="MAIL" ui-sref="mail"></uib-tab>
-    <uib-tab index="2" heading="NEWS" ui-sref="news"></uib-tab>
-  </uib-tabset-->
   <div ui-view></div>
 </div>

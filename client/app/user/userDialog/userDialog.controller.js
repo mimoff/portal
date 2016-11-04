@@ -5,6 +5,7 @@ class UserDialogController {
 
   $onInit() {
     this.user = this.resolve.user;
+    this.user.birthdate = new Date(this.user.birthdate);
   }
 
   ok() {

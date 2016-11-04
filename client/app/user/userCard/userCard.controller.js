@@ -14,13 +14,8 @@ class UserCardController {
     });
 
     modalInstance.result.then(value => {
-      //this.user=value;
       this._UserService.updateUser(value).then(response => this.user = response);
     });
-  }
-
-  __onDelete() {
-    alert('Delete ' + this.user);
   }
 }
 

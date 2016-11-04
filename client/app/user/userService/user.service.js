@@ -8,7 +8,7 @@ class UserService {
   }
 
   createUser(user) {
-    return this.$http.post('https://test-api.javascript.ru/v1/vbuyanov/users',user).then(response => {debugger; return response.data;});
+    return this.$http.post('https://test-api.javascript.ru/v1/vbuyanov/users',user).then(response => response.data);
   }
 
   updateUser(user) {
@@ -16,8 +16,7 @@ class UserService {
   }
 
   deleteUser(user) {
-    debugger;
-    return this.$http.delete('https://test-api.javascript.ru/v1/vbuyanov/users/'+user._id).then(response => {debugger; return response.data;});
+    return this.$http.delete('https://test-api.javascript.ru/v1/vbuyanov/users/'+user._id).then(response => response.data);
   }
 }
 

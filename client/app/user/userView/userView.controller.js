@@ -13,7 +13,7 @@ class UserViewController {
           user: () => {
             let newUser={
               fullName: 'new user',
-              birthdate: '1970-01-01',
+              birthdate: new Date('1970-01-01'),
               gender: 'M',
               address: 'new address',
               email: 'email@site.com'
